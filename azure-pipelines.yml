@@ -1,0 +1,32 @@
+# Ruby
+# Package your Ruby project.
+# Add steps that install rails, analyze code, save build artifacts, deploy, and more:
+# t/languages/ruby
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: UseRubyVersion@0
+  inputs:
+    versionSpec: '>= 2.5'
+
+- script: |
+    gem install bundler
+    bundle install --retry=3 --jobs=4
+  displayName: 'bundle install'
+
+- script: JEKYLL_ENV=production jekyll build
+  displayName: 'jekyll build'
+
+- task: AzureCLI@2
+  displayName: az storage blob sync
+  inputs:
+    azureSubscription: arm-secrist.dev
+    scriptType: ps
+    scriptLocation: inlineScript
+    inlineScript: |
+        az storage blob sync --account-name 'secristdevweb' --container '$web' --source '_site' 
