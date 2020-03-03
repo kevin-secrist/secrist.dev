@@ -1,0 +1,199 @@
+# Build settings
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin    : "air" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+# Site Settings
+locale                   : "en-US"
+title                    : "Kevin Secrist"
+title_separator          : "-"
+subtitle                 : "Software Development Blog"
+name                     : &name "Kevin Secrist"
+description              : &description "A blog about software development"
+url                      : https://secrist.dev
+baseurl                  : # the subpath of your site, e.g. "/blog"
+email                    : kevin@secrist.dev
+github_username          : kevin-secrist
+repository               : "kevin-secrist/secrist.dev"
+teaser                   : "/assets/images/fatos-bytyqi-Agx5_TLsIf4-unsplash.jpg" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+# breadcrumbs              : true
+# breadcrumb_home_label    : "Home"
+# breadcrumb_separator     : ">"
+words_per_minute         : 200
+comments:
+  provider               : false
+  disqus:
+    shortname            :
+
+atom_feed:
+  path                   : # blank (default) uses feed.xml
+
+search                   : true
+search_full_content      : true
+search_provider          : lunr
+
+# SEO Related
+google_site_verification :
+bing_site_verification   :
+yandex_site_verification :
+naver_site_verification  :
+
+# Social Sharing
+twitter:
+  username               : &twitter
+og_image                 : "/assets/images/site-logo.png" # Open Graph/Twitter default site image
+# For specifying social profiles, used in _includes/seo.html
+# - https://developers.google.com/structured-data/customize/social-profiles
+social:
+  type                   : # Person or Organization (defaults to Person)
+  name                   : # If the user or organization name differs from the site's name
+  links:
+    - "https://github.com/kevin-secrist"
+    - "https://www.linkedin.com/in/kevin-secrist"
+    - "https://stackoverflow.com/users/6950124/kevin-secrist"
+
+# Analytics
+analytics:
+  provider               : false # false (default), "google", "google-universal", "custom"
+
+# Site Author
+author:
+  name             : *name # *name is a YAML reference pointing to the &anchor earlier
+  avatar           : "/assets/images/kevin-secrist.jpg"
+  bio              : "..."
+  location         : "Richmond, VA"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/kevin-secrist"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin-in"
+      url: "https://www.linkedin.com/in/kevin-secrist"
+    - label: "Stack Overflow"
+      icon: "fab fa-fw fa-stack-overflow"
+      url: "https://stackoverflow.com/users/6950124/kevin-secrist"
+
+# Site Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/kevin-secrist"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin-in"
+      url: "https://www.linkedin.com/in/kevin-secrist"
+    - label: "Stack Overflow"
+      icon: "fab fa-fw fa-stack-overflow"
+      url: "https://stackoverflow.com/users/6950124/kevin-secrist"
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - config
+  - Gemfile
+  - Gemfile.lock
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+keep_files:
+  - .git
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:path/
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: false
+      related: false
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: America/New_York # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+plugins:
+  - jekyll-archives
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+# Archives
+year_archive:
+  type: jekyll-archives
+  path: /archives/
+tag_archive:
+  type: jekyll-archives
+  path: /tags/
+category_archive:
+  type: jekyll-archives
+  path: /categories/
+jekyll-archives:
+  enabled:
+    - year
+    - tag
+    - category
+  layout: archive-taxonomy
+  permalinks:
+    year: "/archives/:year/"
+    tag: "/tags/:name/"
+    category: "/categories/:name/"
