@@ -89,7 +89,6 @@ footer:
 
 # Reading Files
 include:
-  - .htaccess
   - _pages
 exclude:
   - vendor
@@ -107,6 +106,8 @@ exclude:
   - node_modules
   - package.json
   - Rakefile
+  - LICENSE
+  - azure-pipelines.yml
 keep_files:
   - .git
 encoding: "utf-8"
