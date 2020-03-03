@@ -6,7 +6,7 @@ minimal_mistakes_skin    : "air" # "default", "air", "aqua", "contrast", "dark",
 locale                   : "en-US"
 title                    : "Kevin Secrist"
 title_separator          : "-"
-subtitle                 : "Software Development Blog"
+subtitle                 : "Software Dev Blog"
 name                     : &name "Kevin Secrist"
 description              : &description "A blog about software development"
 url                      : https://secrist.dev
