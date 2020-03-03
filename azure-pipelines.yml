@@ -26,7 +26,7 @@ steps:
   displayName: az storage blob sync
   inputs:
     azureSubscription: arm-secrist.dev
-    scriptType: ps
+    scriptType: bash
     scriptLocation: inlineScript
     inlineScript: |
         az storage blob sync --account-name 'secristdevweb' --container '$web' --source '_site' 
