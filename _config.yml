@@ -64,13 +64,13 @@ author:
   bio              : "Backend Developer who loves learning about and using new technologies."
   location         : "Richmond, VA"
   links:
-    - label: "GitHub"
+    - label: "kevin-secrist"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/kevin-secrist"
-    - label: "LinkedIn"
+    - label: "kevin-secrist"
       icon: "fab fa-fw fa-linkedin-in"
       url: "https://www.linkedin.com/in/kevin-secrist"
-    - label: "Stack Overflow"
+    - label: "kevin-secrist"
       icon: "fab fa-fw fa-stack-overflow"
       url: "https://stackoverflow.com/users/6950124/kevin-secrist"
 
