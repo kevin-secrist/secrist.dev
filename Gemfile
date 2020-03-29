@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem "jekyll", "~> 4.0.0"
 gem "minimal-mistakes-jekyll", "~> 4.18.0"
+gem "font-awesome-sass", "~> 5.12.0"
 
 group :jekyll_plugins do
   gem "jekyll-archives"
@@ -11,6 +12,7 @@ group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jemoji"
   gem "jekyll-include-cache"
+  gem "jekyll-font-awesome-sass", path: "_plugins/jekyll-font-awesome-sass"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

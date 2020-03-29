@@ -81,6 +81,9 @@ footer:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/kevin-secrist"
 
+footer_scripts:
+  - /assets/js/main.min.js
+
 # Reading Files
 include:
   - _pages
@@ -124,6 +127,9 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+
+font-awesome:
+  assets: true
 
 # Collections
 collections:
@@ -171,6 +177,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-font-awesome-sass
 
 # Archives
 year_archive:
